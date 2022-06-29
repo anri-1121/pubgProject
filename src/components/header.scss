@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding: 20px 40px 20px 13%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    position: relative;
+    transition: 1s all ease;
+    z-index: 10;
+    transition: 3s ease all;
+
+    .logo {
+        font-size: 60px;
+        color: #862135;
+        position: absolute;
+        font-family: 'Blaka', cursive;
+        text-transform: uppercase;
+        top: -35px;
+        text-shadow: 0 0 10px rgb(14, 6, 6), 0 0 25px #484852;
+
+
+        span {
+            color: #771e2f;
+            text-shadow: 0 0 10px rgb(14, 6, 6), 0 0 25px #484852;
+        }
+    }
+
+    .leftNav {
+        display: inline;
+        position: absolute;
+        right: 40%;
+        top: -22px;
+        color: #862135;
+        font-size: 20px;
+        letter-spacing:4px;
+        font-family: 'Luckiest Guy', cursive;
+        text-shadow: 0 0 10px rgb(14, 6, 6), 0 0 25px #484852;
+
+        span {
+            color: #6f2232;
+            font-size: 53px;
+        }
+    }
+}
+
+.gunShotMenu {
+    width: 70px;
+    height: 50px;
+    position: absolute;
+    right: 15%;
+    top: 15px;
+    cursor: pointer;
+
+
+    .firstLine {
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        height: 15px;
+        box-shadow: 0 0 10px rgb(14, 6, 6), 0 0 25px #484852;
+        background-color: #771e2f;
+        border-radius: 2px 1px 1px 3px;
+        transition: .3s all ease;
+        animation: .4s gunShot 2;
+        animation-delay: .320s;
+    }
+
+    .ActiveGunMenu {
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        height: 15px;
+        background-color: #771e2f;
+        border-radius: 2px 1px 1px 3px;
+        transition: .3s all ease;
+    }
+
+    @keyframes gunShot {
+        0% {
+            left: -2px;
+        }
+        50% {
+            left: 5px;
+        }
+
+        100% {
+            left: -2px;
+        }
+    }
+
+    .bulletReloadDisactive {
+        width: 11px;
+        img {
+            top: 20px;
+            width: 11px;
+            opacity: 0;
+        }
+    }
+
+    .bulletReload {
+        position: relative;
+        img {
+            position: absolute;
+            width: 12px;
+            top: 19px;
+            opacity: 1;
+            left: -5px;
+            transform: rotate(10deg);
+            transition: 0.9s all;
+        }
+    }
+
+    .leverShootingCircle{
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        z-index: -1;
+        top:13px;
+        left: 12px;
+        transform: rotate(120deg);
+        border: solid 2px #771e2f;
+        border-radius: 7px;
+    }
+
+    .secondLine {
+        position: absolute;
+        top: 22px;
+        left: -8px;
+        width: 50%;
+        height: 14px;
+        transform: rotate(100deg);
+        background-color: #771e2f;
+        transition: .3s all ease;
+    }
+}
+
+.menu {
+    width: 25%;
+    height:89.5vh;
+    position: absolute;
+    opacity: 0;
+    top: 80px;
+    background-color: #862135;
+    display: none;
+    justify-content: center;
+
+    .menuHomeIcon {
+        width: 50px;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        filter: saturate(20%);
+    }
+
+    ul {
+        display: flex;
+        font-size: 50px;
+        list-style: none;
+        width: 90%;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-right: 40px;
+        padding-top: 40px;
+        
+        a {
+            text-decoration: none;
+        }
+        li {
+            width: 100%;
+            font-family: 'Blaka', cursive;
+            margin-bottom: 40px;
+            color: #6f2231bc;
+            padding-left: 70px;
+            box-sizing: border-box;
+            transition: .3s all ease;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.250);
+            }
+        }
+    }
+}
+
+.menuActive {
+    display: flex;
+    right: 0;
+    opacity: 1;
+}
+
+.header:hover .leftNav h1 {
+    transform: scale(1.04);
+    letter-spacing: 5.6px;
+    transition: .5s all ease;
+}
+
+.header:not(:hover) .leftNav h1 { 
+    transition: .5s all ease;
+} 
+
+@media (max-width: 912px) { 
+    .header{
+        padding-left: 10%;
+        .logo {
+            font-size: 50px;
+            top: -25px;
+        }
+        .leftNav {
+            display: block;
+            top: -15px;
+            right: 30%;
+            h1 {
+                font-size: 30px;
+            }
+        }
+        .gunShotMenu {
+            width: 60px;
+            right: 15%;
+
+            .firstLine {
+                width: 90%;
+            }
+            .secondLine {
+                width: 60%;
+            }
+        }
+        .menu {
+            width: 100%;
+
+            ul {
+                width: 70%;
+                padding-right: 42px;
+
+                li {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header{
+        padding-left:21%;
+        .logo {
+            font-size: 60px;
+            top: -35px;
+        }
+        .leftNav {
+            display: none;
+        }
+        .gunShotMenu {
+            width: 75px;
+            right: 20%;
+
+            .firstLine {
+                width: 100%;
+            }
+            .secondLine {
+                width: 46%;
+            }
+        }     
+    }
+}

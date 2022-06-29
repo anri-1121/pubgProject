@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+section {
+  overflow: hidden;
+
+  .scheduleCard {
+    position: absolute;
+    width: 40%;
+    min-height: 320px;
+    margin: 7% 0 0 40px;
+    max-height: 500px;
+    background: rgba(18, 24, 32, 0.616);
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 5%;
+    padding: 15px;
+    scrollbar-width: thin;
+  }
+}
+
+table {
+  border-collapse: separate;
+  width: 100%;
+  color: #fff;
+  border-spacing: 8px 0px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-bottom: 1px solid #ddd;
+  font-size: 17px;
+  transition: 0.2s all ease;
+}
+
+td:hover {
+  background-color: #27292f;
+}
+
+.video {
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  top: -60px;
+  filter: brightness(50%);
+}
+
+.scheduleCard::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(126, 127, 130);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #27292f;
+}
+
+// Section2 ________________________________>
+.secondSection {
+  box-shadow: 20px 20px 100px 70px rgb(0, 0, 0);
+  width: 100%;
+  height: 83.6vh;
+}
+
+.video2 {
+  z-index: -1;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  margin-top: 80vh;
+  filter: saturate(55%);
+}
+
+@media (max-width: 912px) { 
+  .firstSection {
+    .scheduleCard {
+      width: 90%;
+      margin: 7% 0 0 25px;
+    }
+  }
+}

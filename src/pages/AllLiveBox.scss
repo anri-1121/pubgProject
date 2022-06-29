@@ -1,0 +1,47 @@
+.livesSection {
+    width: 100%;
+    height: calc( 100vh - 80px );
+    display: flex;
+    padding: 4% 5%;
+    box-sizing: border-box;
+    position: relative;
+
+    video {
+        position: absolute;
+        left: 0;
+        filter: brightness(43%);
+    }
+    
+    .box {
+        width: 27%;
+        display: flex;
+        height: 250px;
+        background-color: rgb(52, 38, 51);
+        border-radius: 20px;
+        position: relative;
+        margin-left: 60px;
+
+        #backgroundImg {
+            border-radius: inherit;
+            filter: saturate(70%);
+            width: 100%;
+            transition: .5s all ease;
+            &:hover {
+                filter: saturate(130%); 
+            }
+        }
+
+        &:hover {
+            &:after {
+                content: "";
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                position: absolute;
+                left: 40%;
+                top: 35%;
+                background-color: rgba(0, 0, 0, 0.782);
+            }
+        }
+    }
+}
