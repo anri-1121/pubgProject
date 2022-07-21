@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
+::selection {
+  background: #0c111abc;
+}
 .tournamentList {
   display: flex;
   justify-content: space-between;
@@ -11,6 +14,9 @@
   background-color: #1a1a1d;
   padding: 70px 30px 0 30px;
   box-sizing: border-box;
+  background: linear-gradient(-170deg, #070402, rgb(7, 10, 21), #746045e3);
+  background-size: 600% 400%;
+  animation: secondSecBgAnimation 9s ease-in-out infinite;
 
   .card {
     width: 22%;
@@ -20,14 +26,13 @@
     position: relative;
     z-index: 1;
     border-radius: 15px 30px 15px 30px;
-    transition: .6s all ease;
+    transition: 0.6s all ease;
     filter: saturate(40%);
     cursor: pointer;
 
     &:hover {
       transform: scale(1.04);
       filter: saturate(100%);
-    
     }
 
     .EuropePoster {
@@ -59,7 +64,7 @@
 
   ul {
     font-size: 18px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
   }
 
@@ -91,7 +96,6 @@
   margin-left: 49%;
 }
 
-
 // reklamis css
 
 .advertisement {
@@ -105,13 +109,74 @@
   background-color: #862135;
   box-sizing: border-box;
 
+  h1 {
+    font-family:Arial, Helvetica, sans-serif; 
+  }
+
   div {
     display: flex;
     border-radius: 20px 50px 20px 50px;
     justify-content: center;
     width: 70%;
-    background-color: #1a1a1d;
     font-size: 25px;
     color: #862135;
+    background: linear-gradient(-350deg, #080F13, #080F13, #20392ee3);
+    background-size: 600% 400%;
+    animation: secondSecBgAnimation 9s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 500px) {
+  .tournamentList {
+    height: 330vh;
+    padding-top: 70px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .desc {
+      display: none;
+    }
+
+    .card {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  .advertisement {
+    top: 0;
+    
+    div {
+      padding-top: 10px;
+      width: 90%;
+      font-size: 17px;
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 800px){
+  .tournamentList {
+    height: 330vh;
+
+    .desc {
+      display: none;
+    }
+
+    .card {
+      width: 70%;
+      height: 23%;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  .advertisement {
+    top: 0;
+    
+    div {
+      width: 90%;
+      font-size: 22px;
+    }
   }
 }

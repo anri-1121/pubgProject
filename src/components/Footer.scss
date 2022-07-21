@@ -1,0 +1,343 @@
+.footer {
+  position: relative;
+  display: flex;
+  margin-top: -20px;
+  width: 100%;
+  overflow-x: hidden;
+  height: 500px;
+  padding: 80px 30px 0 100px;
+  box-sizing: border-box;
+  border: none;
+
+  .contact_block {
+    width: 35%;
+    height: 90%;
+    margin-left: 5%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+
+    .icon_block {
+      width: 70px;
+      filter:contrast(110%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      height: 60px;
+      border-radius: 30px;
+      background-color: #5a1926;
+    }
+
+    .locationPlace {
+      display: flex;
+      position: relative;
+      width: 100%;
+      margin-bottom: 40px;
+      a {
+        color: #862135;
+      }
+      .st_address {
+        width: 40%;
+        top: 3px;
+        left: 20%;
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        position: absolute;
+      }
+
+      .loc_address {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        width: 60%;
+        bottom: 3px;
+        font-weight: bolder;
+        left: 20%;
+        font-size: 25px;
+        position: absolute;
+      }
+    }
+
+    .phonePlace {
+      display: flex;
+      position: relative;
+      width: 100%;
+
+      .phone_number {
+        width: 40%;
+        top: 17px;
+        left: 20%;
+        font-size: 23px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        position: absolute;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .emailPlace {
+      display: flex;
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+
+      .email {
+        font-size: 23px;
+        position: absolute;
+        top: 10px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        left: 20%;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .quick_navigation {
+    width: 20%;
+    height: 90%;
+    margin-top: -20px;
+
+    h1 {
+      color: #fff;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      position: relative;
+    }
+
+    h1:after {
+      content: "";
+      width: 20%;
+      margin-top: 5px;
+      height: 3.3px;
+      background-color: #862135;
+      transition: 0.35s ease-in-out all;
+      display: block;
+      position: absolute;
+      left: 10%;
+    }
+
+    &:hover h1:after {
+      width: 70%;
+      background-color: #4d1722;
+      left: 0;
+    }
+
+    .footer_nav {
+      width: 70%;
+      height: 80%;
+      color: #fff;
+      margin-left: -12%;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 23px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .aboutPlace {
+    width: 20%;
+    height: 90%;
+    margin-top: -20px;
+    margin-left: 3%;
+
+    h1 {
+      color: #fff;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      position: relative;
+    }
+
+    h1:after {
+      content: "";
+      width: 20%;
+      margin-top: 6px;
+      height: 3.3px;
+      background-color: #862135;
+      transition: 0.35s ease-in-out all;
+      display: block;
+      position: absolute;
+      left: 30%;
+    }
+
+    &:hover h1:after {
+      width: 105%;
+      background-color: #4d1722;
+      left: 0;
+    }
+
+    .describe {
+      width: 110%;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-weight: bold;
+      color: #862135;
+      min-height: 50%;
+      max-height: 80%;
+      font-size: 23px;
+    }
+  }
+
+  .socialmediaPlace {
+    position: absolute;
+    bottom: 6%;
+    display: flex;
+    left:12.5%;
+    height: 60px;
+    box-sizing: border-box;
+    width: 20%; 
+
+    h3 {
+      position: absolute;
+      background-color: #39121a;
+      padding: 10px;
+      box-sizing: border-box;
+      bottom: -12px;
+      color: #fff;
+      font-weight: bolder;
+      font-size: 20px;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      left: 70%;
+    }
+
+    .social_icon {
+      width: 70px;
+      height: 60px;
+      filter:contrast(180%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 25px;
+      box-sizing: border-box;
+      border-radius: 30px;
+      background-color: #5a1926;
+      transition: .3s all ease-in-out;
+      &:hover {
+        background-color: #6d1021;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .footer {
+    .contact_block {
+      .icon_block {
+        width: 60px;
+        height: 55px;
+      }
+    }
+
+    .aboutPlace h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .footer {
+    flex-direction: column;
+    padding-top: 50px;
+    overflow: hidden;
+    height: 100%;
+    margin-top: 0%;
+
+    .contact_block {
+      width: 100%;
+      margin-left: -38%;
+      box-sizing: border-box;
+
+      .locationPlace {
+        margin-bottom: 25px;
+
+        .st_address {
+          width: 100%;
+          left: 40%;
+        }
+
+        .loc_address {
+          width: 100%;
+          left: 37%;
+        }
+      }
+
+      .phonePlace {
+        .phone_number {
+          width: 100%;
+          left: 38%;
+        }
+      }
+
+      .emailPlace {
+        .email {
+          font-size: 20px;
+          left: 37%;
+          top: 15px;
+        }
+      }
+    }
+
+    .quick_navigation {
+      width: 100%;
+      height: 90%;
+      margin-top: 0;
+
+      &.hoverontouch--aktiv h1::after {
+        width: 90%;
+        background-color: #4d1722;
+        left: 0;
+      }
+
+      .footer_nav {
+        width: 100%;
+        margin-left: -15%;
+      }
+    }
+
+    .aboutPlace {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: -13%;
+
+      h1:after {
+        height: 4px;
+      }
+      .describe {
+        font-size: 27px;
+      }
+    }
+    
+    .socialmediaPlace {
+      position: unset;
+      margin-bottom: 30%;
+      margin-top: 5%;
+
+      .social_icon {
+        width: 80px;
+        height: 60px;
+      }
+
+      h3 {
+        position: absolute;
+        background-color: #39121a;
+        padding: 6px;
+        box-sizing: border-box;
+        bottom: 0;
+        color: #fff;
+        font-weight: bolder;
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        left: 30%;
+      }
+    }
+  }
+}

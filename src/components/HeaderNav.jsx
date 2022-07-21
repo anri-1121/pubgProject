@@ -22,7 +22,7 @@ const HeaderNav = (props) => {
     return(
         <header className="header" style={{backgroundColor: props.bgColor, transition: ".4s backgroundColor ease"}}>
             <Link to="/">
-                <h1 className='logo' style={{color: props.itemColor}}>L<span style={{color:props.itemColor}}>iw</span></h1>
+                <h1 className='logo' style={{color: props.itemColor}}>A<span style={{color:props.itemColor}}>ndu</span></h1>
             </Link>
             <div className='leftNav'>
                 <h1 style={{color: props.itemColor, marginRight:"40px"}}> <span style={{color: props.itemColor}}>{props.pageTitle.charAt(0)}</span>{props.pageTitle.substring(1)}</h1>

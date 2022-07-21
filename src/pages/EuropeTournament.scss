@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
 section {
   overflow: hidden;
 
   .scheduleCard {
     position: absolute;
-    width: 40%;
+    width: 100%;
     min-height: 320px;
     margin: 7% 0 0 40px;
     max-height: 500px;
@@ -23,7 +23,26 @@ table {
   border-collapse: separate;
   width: 100%;
   color: #fff;
-  border-spacing: 8px 0px;
+  border-spacing: 8px 5px;
+
+  .linkData {
+    max-width: 250px;
+    min-width: 200px;
+  }
+
+  .linkData::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #060f1fd4;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(10, 15, 30);
+  }
 }
 
 th,
@@ -33,7 +52,7 @@ td {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   border-bottom: 1px solid #ddd;
-  font-size: 17px;
+  font-size: 19px;
   transition: 0.2s all ease;
 }
 
@@ -68,6 +87,8 @@ td:hover {
 .secondSection {
   box-shadow: 20px 20px 100px 70px rgb(0, 0, 0);
   width: 100%;
+  display: flex;
+  justify-content: center;
   height: 83.6vh;
 }
 
@@ -80,11 +101,145 @@ td:hover {
   filter: saturate(55%);
 }
 
-@media (max-width: 912px) { 
+
+// Start Coding For Responsive Europian Page
+@media (max-width: 376px) {
   .firstSection {
+    background-image: url("../img/mobileDevBg.png");
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(60%);
+    .video {
+      display: none;
+    }
+
     .scheduleCard {
-      width: 90%;
-      margin: 7% 0 0 25px;
+      transform: translateX(-10%) translateY(7%) !important;
+      overflow-x: scroll !important;
+      width: 100% !important;
+      max-height: 70vh !important;
+
+      th {
+        font-size: 17px !important;
+      }
+      td {
+        font-size: 14.5px !important;
+      }
+    }
+  }
+
+  .secondSection {
+    height: 130vh !important;
+
+    .rankTable {
+      background-color: rgba(0, 0, 0, 0);
+      width: 100%;
+      margin-left: 0;
+
+      h1 {
+        margin: 20px 27%;
+      }
+      th {
+        font-size: 20.5px;
+      }
+      td {
+        font-size:18px;
+      }
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 395px) {
+  .firstSection {
+    background-image: url("../img/mobileDevBg.png");
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(70%);
+
+    .video {
+      display: none;
+    }
+
+    .scheduleCard {
+      transform: translateX(-10%) translateY(7%) !important;
+      overflow-x: scroll !important;
+      width: 100% !important;
+      max-height: 70vh !important;
+
+      th {
+        font-size: 17px !important;
+      }
+      td {
+        font-size: 14.5px !important;
+      }
+    }
+  }
+
+  .secondSection {
+    height: 120vh !important;
+
+    .rankTable {
+      background-color: rgba(0, 0, 0, 0);
+      margin-left: -1%;
+      width: 100%;
+
+      h1 {
+        margin: 20px 30%;
+      }
+
+      th {
+        font-size: 23px;
+      }
+      td {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@media (min-width: 395px) and (max-width: 700px) {
+  .firstSection {
+    background-image: url("../img/mobileDevBg.png");
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(70%);
+    .video {
+      display: none;
+    }
+
+    .scheduleCard {
+      transform: translateX(-10%) translateY(7%) !important;
+      overflow-x: scroll !important;
+      width: 100% !important;
+      max-height: 70vh !important;
+
+      th {
+        font-size: 22px !important;
+      }
+      td {
+        font-size: 19px !important;
+      }
+    }
+  }
+
+  .secondSection {
+    height: 115vh !important;
+
+    .rankTable {
+      background-color: rgba(0, 0, 0, 0);
+      width: 100%;
+      margin-left: 0;
+
+      h1 {
+        margin: 20px 30%;
+      }
+
+      th {
+        font-size: 25px;
+      }
+      td {
+        font-size: 22px;
+      }
     }
   }
 }

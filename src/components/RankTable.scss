@@ -1,34 +1,33 @@
 .rankTable {
-    width: 90%;
-    height: 87%;
-    margin-left: 4.5%;
-    background: rgba(18, 24, 32, 0.92);
-    position: absolute;
-    border-radius: 20px;
-    bottom: -95vh;
-  
-    table {
-      padding: 10px;
-      box-sizing: border-box;
-  
-      td {
-        span {
-          margin-left:6px;
-        }
+  width: 60%;
+  height: 87%;
+  background: rgba(18, 24, 32, 0.92);
+  position: absolute;
+  border-radius: 20px;
+  bottom: -95vh;
+
+  table {
+    padding: 10px;
+    box-sizing: border-box;
+
+    td {
+      span {
+        margin-left: 6px;
       }
     }
-  
-    th {
-      font-size: 19px;
-      font-weight: bolder;
-      background-color: #27292f73;
-    }
-  
-    h1 {
-      margin: 20px 36%;
-      font-size:37px;
-      font-family: 'Luckiest Guy', cursive;
-      color: rgba(180, 180, 180, 0.622);
-      letter-spacing: 5px;
-    }
   }
+
+  th {
+    font-size: 19px;
+    font-weight: bolder;
+    background-color: #27292f73;
+  }
+
+  h1 {
+    margin: 20px 36%;
+    font-size: 37px;
+    font-family: "Luckiest Guy", cursive;
+    color: rgba(180, 180, 180, 0.622);
+    letter-spacing: 5px;
+  }
+}

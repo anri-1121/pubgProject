@@ -1,0 +1,132 @@
+.firstSection {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  .video {
+    overflow-y: scroll;
+  }
+
+  .scheduleCard {
+    background: rgba(17, 21, 29, 0.93);
+  }
+}
+
+.secondSection {
+  width: 100%;
+  height: 100vh;
+  background: #070402;
+  background: linear-gradient(-170deg, #0c1115, #000008, #746658);
+  background-size: 600% 400%;
+  animation: secondSecBgAnimation 7s ease-in-out infinite;
+
+  .Geo_Rank_Table {
+    h1 {
+      transform: translateX(35%);
+      font-size: 37px;
+      font-family: "Luckiest Guy", cursive;
+      color: rgba(180, 180, 180, 0.622);
+      letter-spacing: 5px;
+    }
+
+    table {
+      padding: 5px;
+      box-sizing: border-box;
+
+      td {
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    padding-top: 1px;
+    width: 60%;
+    margin: 2.5% auto;
+    height: 90%;
+    border-radius: 20px;
+    background-color: #0c1115;
+  }
+}
+
+// Start Coding for Responsive Georgian Page
+
+@media (max-width: 376px) {
+  .geoMobileBg {
+    background-image: url("../img/mobileDevGeoBg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .secondSection {
+    height: 125vh !important;
+
+    .Geo_Rank_Table {
+      width: 100%;
+      background-color: #00000800;
+      margin: 10.5% auto;
+
+      h1 {
+        transform: translateX(28%);
+      }
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 395px) {
+  .geoMobileBg {
+    background-image: url("../img/mobileDevGeoBg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .secondSection {
+    height: 105vh !important;
+
+    .Geo_Rank_Table {
+      width: 100%;
+      background-color: #00000800;
+      margin: 10.5% auto;
+
+      th {
+        font-size: 23px;
+      }
+      td {
+        font-size: 21px;
+      }
+      h1 {
+        transform: translateX(26%);
+      }
+    }
+  }
+}
+
+@media (min-width: 395px) and (max-width: 700px) {
+  .geoMobileBg {
+    background-image: url("../img/mobileDevGeoBg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .secondSection {
+    height: 100vh !important;
+
+    .Geo_Rank_Table {
+      width: 100%;
+      background-color: #00000800;
+      margin: 11% auto;
+
+      th {
+        font-size: 24px;
+      }
+      td {
+        font-size: 21px;
+      }
+      h1 {
+        transform: translateX(28%);
+      }
+    }
+  }
+}
